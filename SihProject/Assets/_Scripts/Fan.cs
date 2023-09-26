@@ -11,6 +11,7 @@ public class Fan : MonoBehaviour
     float lifeTime;
     Rigidbody rb;
     Player player;
+    public AudioSource rotation;
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class Fan : MonoBehaviour
         float randomFloat = (float)random.NextDouble() * player.timeRadomize;
         lifeTime = player.timeTillDisaster + randomFloat;
         rb = GetComponent<Rigidbody>();
+        rotation.Play();
     }
     private void FixedUpdate()
     {
@@ -29,6 +31,7 @@ public class Fan : MonoBehaviour
             {
                 rotationSpeed -= Time.deltaTime * stoppingSpeed;
                 rb.useGravity = true;
+                rotation.Stop();
             }
             lifeTime -= Time.deltaTime;
         }
