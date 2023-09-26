@@ -45,6 +45,8 @@ GameObject:
   - component: {fileID: 1202991427380507533}
   - component: {fileID: 6959292304352021255}
   - component: {fileID: 486381273786758384}
+  - component: {fileID: 3351781163754497620}
+  - component: {fileID: 1412838735177200153}
   m_Layer: 0
   m_Name: Working Closet
   m_TagString: Untagged
@@ -152,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topplingPos: {fileID: 3679065294420560193}
-  topplingForce: 50
+  topplingForce: 5000
   direction: 1
 --- !u!54 &486381273786758384
 Rigidbody:
@@ -162,7 +164,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6874398568042604789}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -180,4 +182,32 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
+--- !u!114 &3351781163754497620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6874398568042604789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df9f44ec7569484380d122f0f128d6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particle: {fileID: 1780800398061432018, guid: 3ea7ec07a313f26459fb7f0c4b0ede88, type: 3}
+  scaleDivider: 10
+  particleScale: 0.5
+--- !u!114 &1412838735177200153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6874398568042604789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d5e3fce892516459fd0ddf56f795e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundName: Almirah

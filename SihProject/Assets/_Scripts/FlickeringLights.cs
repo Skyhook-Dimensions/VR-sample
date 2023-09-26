@@ -12,7 +12,6 @@ public class FlickeringLights : MonoBehaviour
     float lifeTime;
     Player player;
     bool started;
-
     private void Start()
     {
         player = FindObjectOfType<Player>();
